@@ -8,10 +8,12 @@ def select_station():
     print("--- 【乗車駅選択】 ---")
     for i in range(len(stations)):
         #i: [staions]まで[fares]円
-        print(str(i) + ":" + stations[i] + "まで" + str(fares[i]) + "円")
-    st_num = int(input("乗車した駅を入力してください（キャンセルする場合には99を入力）"))
-    print(st_num)
-    return st_num
+        print(str(i+1) + ":" + stations[i] + "まで" + str(fares[i]) + "円")
+    destination = int(input("乗車した駅を入力してください（キャンセルする場合には99を入力）"))-1
+    if destination == 99-1:
+        print("駅の選択をキャンセルしました。")
+        return 0
+    return destination
     
 if __name__ == "__main__":
     select_station()
