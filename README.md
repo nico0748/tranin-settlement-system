@@ -32,7 +32,7 @@ main()
 
 ## 作業担当
 
-| Icon | Function | Description | Dev |
+| 関数 | 機能 | 担当者 |
 |:---:|:---|:---|:---|
 | `menu` | 機能選択メニュー | **[三木]** |
 | `select_station` | 乗車駅の選択 | **[細澤]** |
