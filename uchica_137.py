@@ -1,4 +1,5 @@
-from componets import moduleA as mA
+from components import moduleA as ma
+from components import module as mb
 
 def main():
     return
