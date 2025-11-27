@@ -23,7 +23,7 @@ def main():
             elif menu_num == 99:
                 continue
         except:
-            print("有効な数値を入力し直してください。")
+            print("正しい数値を入力してください。")
             continue
             
 
