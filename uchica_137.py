@@ -18,6 +18,7 @@ def select_station():
     stations = ["秋葉原", "山梨", "長野"]
     fares = [133, 4128, 7990]
 
+
     while True:
         print("--- 【乗車駅選択】 ---")
         for i in range(len(stations)):
@@ -119,7 +120,7 @@ def main():
                 print("1, 2, 99 のいずれかを入力してください。")
 
         except ValueError:
-            print("有効な数値を入力し直してください。")
+            print("正しい数値を入力してください。")
             continue
             
 
