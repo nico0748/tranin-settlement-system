@@ -35,13 +35,14 @@ def select_station():
 
             elif 1 <= input_val <= len(stations):
                 destination_index = input_val - 1
+                print(f"乗車駅は{stations[destination_index]}で料金は{fares[destination_index]}円です。")
                 return fares[destination_index]
 
             else:
-                print("有効な数値を入力し直してください。")
+                print("正しい数値を入力してください。")
 
         except ValueError:
-             print("有効な数値を入力し直してください。")
+             print("正しい数値を入力してください。")
 
 
 def pay(charge_balance, fare): 
@@ -93,10 +94,10 @@ def charge(charge_balance):
                 return charge_balance 
 
             else:
-                print("有効な数値を入力し直してください。")
+                print("正しい数値を入力してください。")
               # return charge_balance
         except ValueError:
-            print("有効な数値を入力し直してください。")
+            print("正しい数値を入力してください。")
     
 
 
@@ -120,10 +121,10 @@ def main():
                 print("プログラムを終了します。")
                 break  # ループを抜けて終了する
             else:
-                print("1, 2, 99 のいずれかを入力してください。")
+                print("正しい数値を入力してください。")
 
         except ValueError:
-            print("有効な数値を入力し直してください。")
+            print("正しい数値を入力してください。")
             continue
             
 
