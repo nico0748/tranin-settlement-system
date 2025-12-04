@@ -4,9 +4,11 @@ def menu():
     option_num = int(len(function))
 
     print("【ウチダ電鉄 交通系ICカード検証システム】")
+    print("")
     for i in range(option_num):
         print(str(i+1) + ":" + function[i])
         i=i+1
+    print("")
     print("使用する機能を入力してください(終了する場合は99を入力)")
 
     func_num=int(input())
@@ -19,9 +21,10 @@ def select_station():
     fares = [133, 4128, 7990]
 
     while True:
-        print("--- 【乗車駅選択】 ---")
+        print("\n【乗車駅選択】\n")
         for i in range(len(stations)):
             print(str(i+1) + ":" + stations[i] + "まで" + str(fares[i]) + "円")
+        print("")
 
         try:
             input_val = int(input("乗車した駅を入力してください（キャンセルする場合には99を入力）"))
@@ -46,8 +49,8 @@ def pay(charge_balance, fare):
     print("チャージ残高は"+str(charge_balance)+"円です")
 
     if fare > charge_balance:
+        print("残高不足です")
         while charge_balance <= fare:
-            print("残高不足です")
             print("3000円自動チャージします。")
             charge_balance += 3000
     
@@ -68,11 +71,12 @@ def charge(charge_balance):
         charges.append((i + 1) * 1000)
 
     while True:
-        print("【チャージ機能】")
+        print("\n【チャージ機能】\n")
         print(f"チャージ残高は{charge_balance}円です。")
 
         for i in range(len(charges)):
             print(f"{i + 1}：{charges[i]}円")
+        print("")
         print("チャージする金額を選択してください。(キャンセルする場合には 99 を入力)")
 
         try:
@@ -90,7 +94,7 @@ def charge(charge_balance):
 
             else:
                 print("有効な数値を入力し直してください。")
-                # return charge_balance
+              # return charge_balance
         except ValueError:
             print("有効な数値を入力し直してください。")
     
