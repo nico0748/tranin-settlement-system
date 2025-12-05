@@ -11,8 +11,12 @@ def menu():
     print("")
     print("使用する機能を入力してください(終了する場合は99を入力)")
 
-    func_num=int(input())
-    return func_num
+    while True:
+        try:
+            func_num = int(input())
+            return func_num
+        except ValueError:
+            print("正しい数値を入力してください。")
 
 
 def select_station():
@@ -106,26 +110,21 @@ def main():
     charge_balance = 500
 
     while True:
-        try:
-            menu_num = menu()
+        menu_num = menu()
+        
+        if menu_num == 1:
+            fare = select_station()
             
-            if menu_num == 1:
-                fare = select_station()
+            if fare != 0:
+                charge_balance = pay(charge_balance, fare)
                 
-                if fare != 0:
-                    charge_balance = pay(charge_balance, fare)
-                    
-            elif menu_num == 2:
-                charge_balance = charge(charge_balance)
-            elif menu_num == 99:
-                print("プログラムを終了します。")
-                break  # ループを抜けて終了する
-            else:
-                print("正しい数値を入力してください。")
-
-        except ValueError:
+        elif menu_num == 2:
+            charge_balance = charge(charge_balance)
+        elif menu_num == 99:
+            print("プログラムを終了します。")
+            break  # ループを抜けて終了する
+        else:
             print("正しい数値を入力してください。")
-            continue
             
 
 
