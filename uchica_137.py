@@ -12,12 +12,12 @@ def menu():
     print("使用する機能を入力してください(終了する場合は99を入力)")
 
     while True:
-        try:
-            func_num = int(input())
+        func_num = int(input())
+        if func_num == 1 or func_num == 2 or func_num == 99:
             return func_num
-        except ValueError:
-            print("正しい数値を入力してください1。")
-
+        else:
+            print("正しい数値を入力してください。")
+            continue
 
 def select_station():
     i = 0
@@ -123,8 +123,6 @@ def main():
         elif menu_num == 99:
             print("プログラムを終了します。")
             break  # ループを抜けて終了する
-        else:
-            print("正しい数値を入力してください2。")
             
 
 
