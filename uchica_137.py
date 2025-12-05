@@ -12,12 +12,11 @@ def menu():
     print("使用する機能を入力してください(終了する場合は99を入力)")
 
     while True:
-        func_num = int(input())
-        if func_num == 1 or func_num == 2 or func_num == 99:
-            return func_num
-        else:
-            print("正しい数値を入力してください。")
-            continue
+            func_num = int(input())
+            if func_num in [1, 2, 99]:
+                return func_num
+            else:
+                print("正しい数値を入力してください。")
 
 def select_station():
     i = 0
