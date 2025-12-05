@@ -16,7 +16,7 @@ def menu():
             func_num = int(input())
             return func_num
         except ValueError:
-            print("正しい数値を入力してください。")
+            print("正しい数値を入力してください1。")
 
 
 def select_station():
@@ -124,7 +124,7 @@ def main():
             print("プログラムを終了します。")
             break  # ループを抜けて終了する
         else:
-            print("正しい数値を入力してください。")
+            print("正しい数値を入力してください2。")
             
 
 
